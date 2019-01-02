@@ -31,6 +31,6 @@ fi
 $(cd $module_path && git checkout --quiet $tag)
 chmod 0744 $module_path/php-extension-stub-generator.phar
 rm -rf $output_dir/*
-(echo "y" | $module_path/php-extension-stub-generator.phar dump-files $extension $output_dir) && status=0 || status=1
-$(cd $module_path && git reset --hard --quiet && git checkout master)
+(echo "y" | $module_path/php-extension-stub-generator.phar dump-files $extension $output_dir) >/dev/null && status=0 || status=1
+$(cd $module_path && git reset --hard --quiet && git checkout master --quiet)
 exit $status
