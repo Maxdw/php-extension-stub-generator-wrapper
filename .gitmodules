@@ -1,0 +1,4 @@
+[submodule "modules/php-extension-stub-generator"]
+	path = modules/php-extension-stub-generator
+	url = /sasezaki/php-extension-stub-generator
+	branch = 0.0.4
